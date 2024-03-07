@@ -1,7 +1,8 @@
-package com.example.iorga_elys_practicapmdmfinal
+package com.example.iorga_elys_practicapmdmfinal.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.iorga_elys_practicapmdmfinal.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
