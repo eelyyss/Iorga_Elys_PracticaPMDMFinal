@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/headlinesFragment"
-        android:name="com.example.iorga_elys_practicapmdmfinal.ui.fragments.HeadlineFragment"
+        android:name="com.example.iorga_elys_practicapmdmfinal.ui.fragments.HeadlinesFragment"
         android:label="HeadlinesFragment">
         <action
             android:id="@+id/action_headlinesFragment_to_articleFragment"

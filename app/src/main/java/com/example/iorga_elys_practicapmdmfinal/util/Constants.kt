@@ -7,6 +7,7 @@ class Constants {
         const val API_KEY = "56d33185aba34d5b9d9a34938c3d9d91"
         const val BASE_URL = "https://newsapi.org"
         const val SEARCH_NEW_DELAY = 500L
+        const val QUERY_PAGE_SIZE = 20
 
         fun finishWithFadeTransition(activity: Activity) {
             activity. overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
