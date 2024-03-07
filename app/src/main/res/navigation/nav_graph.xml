@@ -36,6 +36,6 @@
         android:label="ArticleFragment" >
         <argument
             android:name="article"
-            app:argType="com.example.iorga_elys_practicapmdmfinal.model.data.Article" />
+            app:argType="com.example.iorga_elys_practicapmdmfinal.model.Article" />
     </fragment>
 </navigation>
