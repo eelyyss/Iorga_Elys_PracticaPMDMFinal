@@ -12,12 +12,12 @@ import com.example.iorga_elys_practicapmdmfinal.model.Article
 interface ArticleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun upsert(article: Article): Long
+    suspend fun upsert(article: Article): Long
 
     @Query("SELECT * FROM articles")
     fun getAllArticles(): LiveData<List<Article>>
 
     @Delete
-    fun deleteArticles(article: Article)
+    suspend fun deleteArticles(article: Article)
 
 }
