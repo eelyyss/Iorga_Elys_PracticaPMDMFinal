@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/headlinesFragment"
-        android:title="Headlines"
+        android:title="Noticias"
         android:icon="@drawable/baseline_language_24"/>
 
     <item android:id="@+id/favouritesFragment"
-        android:title="Favourites"
+        android:title="Favoritos"
         android:icon="@drawable/baseline_favorite_24"/>
 
     <item android:id="@+id/searchFragment"
-        android:title="Search"
+        android:title="Buscar"
         android:icon="@drawable/baseline_search_24"/>
 </menu>

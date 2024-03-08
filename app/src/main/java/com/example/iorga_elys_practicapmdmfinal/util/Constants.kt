@@ -9,8 +9,6 @@ class Constants {
         const val SEARCH_NEW_DELAY = 500L
         const val QUERY_PAGE_SIZE = 20
 
-
     }
-
 
 }

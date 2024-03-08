@@ -9,11 +9,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppins_thin"
-        android:text="Favourites."
+        android:fontFamily="serif-monospace"
+        android:text="FAVORITOS"
         android:textColor="@color/blue"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="35sp"
+        android:textStyle="bold"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerFavourites"
