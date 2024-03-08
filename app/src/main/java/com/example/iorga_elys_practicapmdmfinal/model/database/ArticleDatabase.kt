@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import com.example.iorga_elys_practicapmdmfinal.model.Article
 
 
-@Database(entities = [Article::class], version = 1, exportSchema = false)
+@Database(entities = [Article::class], version = 1)
 
 @TypeConverters(Converters::class)
 abstract class ArticleDatabase : RoomDatabase() {

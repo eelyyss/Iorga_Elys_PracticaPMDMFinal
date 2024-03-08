@@ -9,10 +9,6 @@ class Constants {
         const val SEARCH_NEW_DELAY = 500L
         const val QUERY_PAGE_SIZE = 20
 
-        fun finishWithFadeTransition(activity: Activity) {
-            activity. overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            activity.finish()
-        }
 
     }
 

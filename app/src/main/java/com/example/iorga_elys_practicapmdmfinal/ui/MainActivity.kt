@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.iorga_elys_practicapmdmfinal.R
+import com.example.iorga_elys_practicapmdmfinal.databinding.ActivityMainBinding
 import com.example.iorga_elys_practicapmdmfinal.model.database.ArticleDatabase
 import com.example.iorga_elys_practicapmdmfinal.model.respository.NewsRepository
-import com.example.newsprojectpractice.R
-import com.example.newsprojectpractice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

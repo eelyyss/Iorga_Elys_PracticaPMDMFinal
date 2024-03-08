@@ -1,18 +1,17 @@
 package com.example.iorga_elys_practicapmdmfinal.view.adapter
 
-import android.accounts.AuthenticatorDescription
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.AsyncDifferConfig
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.iorga_elys_practicapmdmfinal.R
 import com.example.iorga_elys_practicapmdmfinal.model.Article
-import com.example.newsprojectpractice.R
+
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
 

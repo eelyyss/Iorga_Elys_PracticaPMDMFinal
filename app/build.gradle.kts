@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.newsprojectpractice"
+    namespace = "com.example.iorga_elys_practicapmdmfinal"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.newsprojectpractice"
+        applicationId = "com.example.iorga_elys_practicapmdmfinal"
         minSdk = 28
         targetSdk = 33
         versionCode = 1

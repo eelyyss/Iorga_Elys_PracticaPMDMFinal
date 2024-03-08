@@ -5,10 +5,10 @@ import android.view.View
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.example.iorga_elys_practicapmdmfinal.R
+import com.example.iorga_elys_practicapmdmfinal.databinding.FragmentArticleBinding
 import com.example.iorga_elys_practicapmdmfinal.ui.MainActivity
 import com.example.iorga_elys_practicapmdmfinal.ui.NewsViewModel
-import com.example.newsprojectpractice.R
-import com.example.newsprojectpractice.databinding.FragmentArticleBinding
 import com.google.android.material.snackbar.Snackbar
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {

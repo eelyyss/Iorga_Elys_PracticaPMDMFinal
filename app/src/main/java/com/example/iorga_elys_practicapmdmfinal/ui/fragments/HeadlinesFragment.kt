@@ -15,15 +15,15 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.iorga_elys_practicapmdmfinal.R
+import com.example.iorga_elys_practicapmdmfinal.databinding.FragmentHeadlinesBinding
 import com.example.iorga_elys_practicapmdmfinal.ui.MainActivity
 import com.example.iorga_elys_practicapmdmfinal.ui.NewsViewModel
 import com.example.iorga_elys_practicapmdmfinal.util.Constants
 import com.example.iorga_elys_practicapmdmfinal.util.Resource
 import com.example.iorga_elys_practicapmdmfinal.view.adapter.NewsAdapter
-import com.example.newsprojectpractice.R
-import com.example.newsprojectpractice.databinding.FragmentHeadlinesBinding
 
-class HeadlinesFragment : Fragment() {
+class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
 
     lateinit var newsViewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
