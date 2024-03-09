@@ -15,7 +15,9 @@ data class Article(
     val source: Source?,
     val title: String,
     val url: String,
-    val urlToImage: String
+    val urlToImage: String,
+    var isViewed: Boolean = false
+
 ): Serializable{
     override fun hashCode(): Int {
         return source?.hashCode() ?: 0

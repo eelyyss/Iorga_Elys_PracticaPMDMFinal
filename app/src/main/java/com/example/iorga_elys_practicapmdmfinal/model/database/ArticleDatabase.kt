@@ -5,11 +5,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.iorga_elys_practicapmdmfinal.model.Article
 
-
-@Database(entities = [Article::class], version = 1)
-
+@Database(entities = [Article::class], version = 2)
 @TypeConverters(Converters::class)
 abstract class ArticleDatabase : RoomDatabase() {
 
@@ -21,20 +21,28 @@ abstract class ArticleDatabase : RoomDatabase() {
         private var instance: ArticleDatabase? = null
         private val Lock = Any()
 
+        // Migración para agregar la columna isViewed
+        private val MIGRATION_1_2 = object : Migration(1, 2) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                // Se realizarán las operaciones de migración necesarias aquí.
+                // En este ejemplo, estamos agregando una nueva columna "isViewed" a la tabla "article".
+                database.execSQL("ALTER TABLE articles ADD COLUMN isViewed INTEGER NOT NULL DEFAULT 0")
+            }
+        }
+
         operator fun invoke(context: Context) = instance ?: synchronized(Lock) {
             instance ?: createDatabase(context).also { articleDatabase ->
                 instance = articleDatabase
-
             }
         }
 
         private fun createDatabase(context: Context) =
-
             Room.databaseBuilder(
                 context.applicationContext,
                 ArticleDatabase::class.java,
-                "article_db.db"
-            ).build()
-
+                "article_db2.db"
+            )
+                .addMigrations(MIGRATION_1_2)
+                .build()
     }
 }

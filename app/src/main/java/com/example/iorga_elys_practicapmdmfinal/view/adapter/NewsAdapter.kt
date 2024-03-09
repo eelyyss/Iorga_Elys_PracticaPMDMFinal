@@ -3,6 +3,7 @@ package com.example.iorga_elys_practicapmdmfinal.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -22,6 +23,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
     lateinit var articleTitle: TextView
     lateinit var articleDescription: TextView
     lateinit var articleDateTime: TextView
+    lateinit var btnMarkAsViewed: ImageButton
 
     private val differCallback = object: DiffUtil.ItemCallback<Article>(){
         override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
@@ -63,6 +65,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
         articleTitle = holder.itemView.findViewById(R.id.articleTitle)
         articleDescription = holder.itemView.findViewById(R.id.articleDescription)
         articleDateTime= holder.itemView.findViewById(R.id.articleDateTime)
+        btnMarkAsViewed= holder.itemView.findViewById(R.id.btnMarkAsViewed)
 
         holder.itemView.apply{
 
@@ -72,7 +75,24 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
             articleDescription.text = article.description
             articleDateTime.text = article.publishedAt
 
+            val drawableResId = if (article.isViewed) {
+                R.drawable.baseline_check_circle_filled_24
+            } else {
+                R.drawable.baseline_check_circle_24
+            }
+            btnMarkAsViewed.setImageResource(drawableResId)
+
+            btnMarkAsViewed.setOnClickListener {
+                article.isViewed = !article.isViewed
+
+                val updatedDrawableResId = if (article.isViewed) {
+                    R.drawable.baseline_check_circle_filled_24
+                } else {
+                    R.drawable.baseline_check_circle_24
+                }
+                btnMarkAsViewed.setImageResource(updatedDrawableResId)
             setOnClickListener {
+            }
 
                 onItemClickListener?.let {
 

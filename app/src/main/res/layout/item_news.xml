@@ -19,8 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="SOURCE"
-        android:fontFamily="@font/poppins_thin"
+        android:text="FUENTE"
+        android:textSize="17dp"
+        android:fontFamily="monospace"
         android:textColor="@color/blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/articleImage" />
@@ -42,8 +43,8 @@
 
     <TextView
         android:id="@+id/articleDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="211dp"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:ellipsize="end"
@@ -51,6 +52,7 @@
         android:text="DESCRIPCION"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/articleImage"
         app:layout_constraintTop_toBottomOf="@+id/articleTitle" />
 
@@ -59,11 +61,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
         android:text="FECHA Y HORA"
-        android:textSize="11sp"
-        android:layout_marginStart="8dp"
         android:textColor="@color/black"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/articleDescription" />
+
+    <ImageButton
+        android:id="@+id/btnMarkAsViewed"
+        android:layout_width="48dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/selector_button_mark_as_viewed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
