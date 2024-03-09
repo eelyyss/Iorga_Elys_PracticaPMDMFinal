@@ -21,11 +21,8 @@ abstract class ArticleDatabase : RoomDatabase() {
         private var instance: ArticleDatabase? = null
         private val Lock = Any()
 
-        // Migración para agregar la columna isViewed
         private val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
-                // Se realizarán las operaciones de migración necesarias aquí.
-                // En este ejemplo, estamos agregando una nueva columna "isViewed" a la tabla "article".
                 database.execSQL("ALTER TABLE articles ADD COLUMN isViewed INTEGER NOT NULL DEFAULT 0")
             }
         }
