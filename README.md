@@ -24,4 +24,6 @@ Requisitos Implementados:
 Notas Adicionales:
 - La aplicación requiere una conexión a Internet para recuperar las últimas noticias.
 - Se recomienda mantener la aplicación actualizada para disfrutar de nuevas características y mejoras.
+
+
 ¡Gracias por usar mi aplicación de noticias! Si tiene alguna pregunta o comentario, no dude en contactarme.
